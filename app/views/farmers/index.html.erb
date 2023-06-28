@@ -4,7 +4,7 @@
 
 <div id="farmers">
   <% @farmers.each do |farmer| %>
-    <%= render farmer %>
+    <%= farmer.name %>
     <p>
       <%= link_to "Show this farmer", farmer %>
     </p>

@@ -9,4 +9,15 @@
     <%= farmer.age %>
   </p>
 
+  <%  if farmer.animals.count > 0%>
+    <% farmer.animals.each do |u|%>
+    <ul>
+      <li><%= u.name%></li>
+        <%end%>
+    </ul>
+
+  <%else%>
+    <b></b>
+
+  <%end%>
 </div>
