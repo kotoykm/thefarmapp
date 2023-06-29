@@ -3,5 +3,8 @@
     <strong>Name:</strong>
     <%= mainfarm.name %>
   </p>
-
+<h3>Empleados: </h3>
+  <%mainfarm.farmers.each do |o|%>
+    <p><%= o.name%></p>
+  <%end%>
 </div>
