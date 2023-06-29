@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="mb-3">
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control w-25" %>
   </div>
 
-  <div>
+  <div class="mb-3">
     <%= form.label :farmer_id, style: "display: block" %>
-    <%= form.text_field :farmer_id %>
+    <%= form.text_field :farmer_id, class: "form-control w-25" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit%>
   </div>
 <% end %>

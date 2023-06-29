@@ -5,19 +5,19 @@
   </p>
 
   <p>
-    <strong>Age:</strong>
+    <strong>Edad:</strong>
     <%= farmer.age %>
   </p>
 
+<!--ESTA SECCIÓN REQUIRIO MIRAR COMO AYUDA EL DOCUMENTO DEL PROFESOR PIPIPIPIPI-->
   <%  if farmer.animals.count > 0%>
-    <% farmer.animals.each do |u|%>
+    <p class="fw-bold">Animales de <%= farmer.name%> </p>
     <ul>
-      <li><%= u.name%></li>
-        <%end%>
+      <% farmer.animals.each do |u|%>
+        <li><%= u.name%></li>
+      <%end%>
     </ul>
-
   <%else%>
-    <b></b>
-
+    <p class="fw-bold">No tiene animales aún</p>
   <%end%>
 </div>
