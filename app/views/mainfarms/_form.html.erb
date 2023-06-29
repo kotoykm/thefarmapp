@@ -1,0 +1,36 @@
+<%= form_with(model: mainfarm) do |form| %>
+  <% if mainfarm.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(mainfarm.errors.count, "error") %> prohibited this mainfarm from being saved:</h2>
+
+      <ul>
+        <% mainfarm.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+
+<!--Formulario interno creado con la misma variable form.-->
+  <h3>Granjeros</h3>
+  <div>
+    <%= form.fields_for :farmers do |farmer| %>
+      <%= farmer.label :name, style: "display: block" %>
+      <%= farmer.text_field :name, class: "form-control" %>
+      <%= farmer.label :age, style: "display: block" %>
+      <%= farmer.text_field :age, class: "form-control" %>
+      <br>
+      <%= farmer.check_box :_destroy %>
+      <%= farmer.label :_destroy, "Borrar" %>
+    <% end %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
